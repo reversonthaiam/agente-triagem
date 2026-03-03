@@ -39,6 +39,13 @@ export function ChatWindow() {
     }
   }
 
+  function handleKeyDown(e: React.KeyboardEvent) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      handleSend()
+    }
+  }
+
   return (
     <div className="flex flex-col h-screen max-w-2xl mx-auto p-4">
       <div className="bg-[#55e5a4] text-white text-center py-3 rounded-t-xl font-semibold">
@@ -67,6 +74,7 @@ export function ChatWindow() {
           type="text"
           value={input}
           onChange={e => setInput(e.target.value)}
+          onKeyDown={handleKeyDown}
           placeholder="Digite sua mensagem..."
           className="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm outline-none focus:border-blue-400"
         />

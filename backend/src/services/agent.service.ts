@@ -15,10 +15,15 @@ Os setores disponíveis são:
 
 Regras:
 1. Inicie o atendimento de forma amigável e pergunte o motivo do contato.
-2. Quando a intenção do cliente estiver clara, informe que está transferindo para o setor correto.
-3. Gere um resumo da solicitação nesse formato: [Resumo para o Atendente: descreva brevemente o problema do cliente]
-4. Após a transferência, encerre sua participação.
-5. Se o cliente tentar falar sobre assuntos fora de vendas, suporte ou financeiro, diga que não tem autorização para falar sobre outros assuntos e redirecione para o atendimento.`
+2. Antes de transferir, sempre colete informações adicionais relevantes:
+   - Para Financeiro: peça o CPF ou número do documento
+   - Para Suporte: pergunte se possui comprovante ou número do protocolo
+   - Para Vendas: pergunte qual produto ou serviço tem interesse
+3. Só transfira após ter coletado pelo menos UMA informação adicional do cliente.
+4. Quando a intenção do cliente estiver clara, informe que está transferindo para o setor correto.
+5. Gere um resumo da solicitação nesse formato: [Resumo para o Atendente: descreva brevemente o problema do cliente]
+6. Após a transferência, encerre sua participação.
+7. Se o cliente tentar falar sobre assuntos fora de vendas, suporte ou financeiro, diga que não tem autorização para falar sobre outros assuntos e redirecione para o atendimento.`
 
 export class AgentService {
   async sendMessage(sessionId: string, userMessage: string) {
