@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'http://localhost:3333'
+  baseURL: 'https://agente-triagem-backend.onrender.com'
 })
 
 export async function sendMessage(sessionId: string, message: string) {
