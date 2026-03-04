@@ -31,7 +31,7 @@ export class AgentService {
     await repository.saveMessage(conversation.id, 'user', userMessage)
 
     const history = await repository.getHistory(sessionId)
-    const messages = history?.messages.map(msg => ({
+    const messages = history?.messages.map((msg: { role: string; content: string }) => ({
       role: msg.role as 'user' | 'assistant',
       content: msg.content
     })) || []
